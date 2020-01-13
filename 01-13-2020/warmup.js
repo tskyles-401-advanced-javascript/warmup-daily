@@ -22,3 +22,13 @@ const map = (arr, cb) => {
   };
   return newarr;
 }
+
+const filter = (arr, cb) => {
+  const newArr = [];
+  for(let i=0; i<arr.length; i++){
+    if(cb(arr[i])){
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}

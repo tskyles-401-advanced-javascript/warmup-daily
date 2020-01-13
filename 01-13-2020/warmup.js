@@ -32,3 +32,11 @@ const filter = (arr, cb) => {
   }
   return newArr;
 }
+
+const reduce = (arr, cb) => {
+  const newValue = 0;
+  for(let i=0; i<arr.length; i++){
+    newValue = cb(newValue, arr[i]);
+  };
+  return newValue;
+}

@@ -31,3 +31,25 @@ const filter = (arr, cb) => {
     };
   };
 };
+
+const reduce = (arr, cb) => {
+  let val;
+  for(let i = 0; i < arr.length; i++){
+    val = cb(val, arr[i]);
+  };
+};
+
+const people = ['Kookla','Fran','Ollie'];
+
+const stuff = {
+  tv: 'huge',
+  radio: 'old',
+  toothbrush: 'frayed',
+  cars: ['Toyota','Mazda']
+}
+
+let state = {people: [...people], stuff: {...stuff}};
+
+let newPeople = ['Odie', ...people, 'Garfield'];
+const newStuff = {...stuff, cars: [...stuff.cars, 'Honda']};
+let newState = {people: ['Odie', ...people, 'Garfield'], stuff: {...stuff, cars: [...stuff.cars, 'Honda']}};

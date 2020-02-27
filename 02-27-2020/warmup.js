@@ -30,3 +30,18 @@ const filter = (arr, cb) => {
   };
   return newArr;
 }
+
+const people = ['Kookla','Fran','Ollie'];
+
+const stuff = {
+  tv: 'huge',
+  radio: 'old',
+  toothbrush: 'frayed',
+  cars: ['Toyota','Mazda']
+}
+
+let state = {people: [...people], stuff: {...stuff}};
+
+let newPeople = ['Odie', ...people, 'Garfield'];
+const newStuff = {...stuff, cars: [...stuff.cars, 'Honda']};
+let newState = {people: ['Odie', ...people, 'Garfield'], stuff: {...stuff, cars: [...stuff.cars, 'Honda']}};
